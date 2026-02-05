@@ -1,0 +1,19 @@
+{
+    "category": "exercise",
+    "items": [
+        {
+            "title": "每日步数建议 - WHO指南",
+            "content": "世界卫生组织(WHO)建议成年人每周进行至少150-300分钟的中等强度有氧运动，或75-150分钟的高强度有氧运动。虽然WHO没有设定具体的每日步数目标，但研究表明：\n\n- 每天7,000-8,000步与显著的健康益处相关\n- 每天10,000步是一个常用的健康目标\n- 对于老年人，每天6,000-8,000步可能就足够了\n\n重要的是，任何增加身体活动的努力都是有益的。从少到多逐渐增加是可持续的方法。",
+            "source": "World Health Organization",
+            "source_url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+            "tier": 1
+        },
+        {
+            "title": "运动强度分区",
+            "content": "根据美国运动医学会(ACSM)的指南，运动强度可以通过心率百分比来划分：\n\n- 非常轻度：<57% 最大心率\n- 轻度：57-63% 最大心率\n- 中等强度：64-76% 最大心率\n- 高强度：77-95% 最大心率\n- 接近最大：≥96% 最大心率\n\n中等强度运动的特征是呼吸加快但仍可以交谈；高强度运动时说话会变得困难。\n\n建议每周包含不同强度的运动组合，以获得全面的健康益处。",
+            "source": "American College of Sports Medicine",
+            "source_url": "https://www.acsm.org/",
+            "tier": 1
+        }
+    ]
+}

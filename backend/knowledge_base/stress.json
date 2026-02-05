@@ -1,0 +1,19 @@
+{
+    "category": "stress",
+    "items": [
+        {
+            "title": "压力与健康的关系 - APA指南",
+            "content": "根据美国心理学会(APA)的研究，长期压力会对身体产生多方面的影响：\n\n生理影响：\n- 心血管系统：血压升高、心率加快\n- 免疫系统：免疫功能下降\n- 消化系统：胃肠问题\n- 肌肉系统：肌肉紧张、头痛\n\n心理影响：\n- 焦虑和抑郁\n- 注意力和记忆力下降\n- 睡眠问题\n\n适度的压力可以提高表现，但慢性压力需要妥善管理以维护健康。",
+            "source": "American Psychological Association",
+            "source_url": "https://www.apa.org/topics/stress",
+            "tier": 1
+        },
+        {
+            "title": "压力管理技巧",
+            "content": "基于科学研究，以下方法可以有效管理压力：\n\n1. 身体活动：规律运动可以降低压力荷尔蒙，释放内啡肽\n2. 放松技巧：\n   - 深呼吸练习\n   - 冥想和正念\n   - 渐进性肌肉放松\n3. 社交支持：与家人朋友保持联系\n4. 时间管理：合理安排任务，避免过度承诺\n5. 健康生活方式：\n   - 充足睡眠\n   - 均衡饮食\n   - 限制咖啡因和酒精\n\n如果压力持续影响日常生活，建议寻求专业心理健康支持。",
+            "source": "World Health Organization",
+            "source_url": "https://www.who.int/news-room/questions-and-answers/item/stress",
+            "tier": 1
+        }
+    ]
+}

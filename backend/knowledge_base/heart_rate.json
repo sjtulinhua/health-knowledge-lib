@@ -1,0 +1,26 @@
+{
+    "category": "heart_rate",
+    "items": [
+        {
+            "title": "正常心率范围 - AHA指南",
+            "content": "根据美国心脏协会(AHA)的指南，成年人静息心率的正常范围是每分钟60-100次。静息心率是指在安静状态下测量的心率。运动员和身体素质良好的人可能有较低的静息心率，通常在40-60次/分钟之间。\n\n影响心率的因素包括：年龄、身体活动水平、情绪状态、某些药物、体位变化、空气温度等。如果您的静息心率持续高于100次/分钟（心动过速）或低于60次/分钟（心动过缓），建议咨询医生。",
+            "source": "American Heart Association (AHA)",
+            "source_url": "https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/all-about-heart-rate-pulse",
+            "tier": 1
+        },
+        {
+            "title": "最大心率计算方法",
+            "content": "最大心率(MHR)是心脏在极限运动时达到的最高心率。最常用的估算公式是：最大心率 = 220 - 年龄。例如，一个30岁的人，估计最大心率约为190次/分钟。\n\n运动强度分区：\n- 轻度运动：50-60% MHR\n- 中度运动：60-70% MHR\n- 有氧运动：70-80% MHR\n- 无氧运动：80-90% MHR\n- 最大强度：90-100% MHR\n\n注意：这个公式只是估算值，实际最大心率可能因人而异。",
+            "source": "American College of Sports Medicine (ACSM)",
+            "source_url": "https://www.acsm.org/",
+            "tier": 1
+        },
+        {
+            "title": "心率与心血管健康",
+            "content": "静息心率是心血管健康的一个重要指标。研究表明，较低的静息心率通常与更好的心血管健康相关。长期有氧运动可以降低静息心率，因为心脏变得更强壮，每次跳动可以泵出更多血液。\n\n世界卫生组织建议成年人每周进行至少150分钟的中等强度有氧运动，或75分钟的高强度有氧运动，以维持心血管健康。",
+            "source": "World Health Organization (WHO)",
+            "source_url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+            "tier": 1
+        }
+    ]
+}

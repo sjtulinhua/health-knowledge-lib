@@ -1,0 +1,26 @@
+{
+    "category": "sleep",
+    "items": [
+        {
+            "title": "成年人睡眠时长建议 - NSF指南",
+            "content": "根据美国国家睡眠基金会(NSF)的建议，不同年龄段的推荐睡眠时长：\n\n- 青少年(14-17岁)：8-10小时\n- 青年(18-25岁)：7-9小时\n- 成年人(26-64岁)：7-9小时\n- 老年人(65岁以上)：7-8小时\n\n这些是基于大量科学研究得出的建议。睡眠不足可能导致注意力下降、免疫功能减弱、情绪问题和慢性健康问题风险增加。睡眠过多也可能与某些健康问题相关。",
+            "source": "National Sleep Foundation",
+            "source_url": "https://www.sleepfoundation.org/how-sleep-works/how-much-sleep-do-we-really-need",
+            "tier": 1
+        },
+        {
+            "title": "睡眠阶段与周期",
+            "content": "根据美国睡眠医学学会(AASM)的分类，睡眠分为以下阶段：\n\n非快速眼动睡眠(NREM)：\n- N1阶段：浅睡眠，容易被唤醒\n- N2阶段：轻度睡眠，占总睡眠时间约50%\n- N3阶段：深度睡眠，身体恢复和组织修复的关键阶段\n\n快速眼动睡眠(REM)：\n- 做梦主要发生在此阶段\n- 对记忆巩固和情绪调节很重要\n\n一个完整的睡眠周期约90-110分钟，一晚通常经历4-6个周期。深度睡眠主要集中在上半夜，REM睡眠在下半夜增加。",
+            "source": "American Academy of Sleep Medicine (AASM)",
+            "source_url": "https://aasm.org/",
+            "tier": 1
+        },
+        {
+            "title": "改善睡眠质量的建议",
+            "content": "基于睡眠医学研究，以下是改善睡眠质量的科学建议：\n\n1. 保持规律的睡眠时间表，包括周末\n2. 创造良好的睡眠环境：安静、黑暗、凉爽(约18-20°C)\n3. 避免睡前咖啡因和酒精\n4. 限制睡前屏幕时间，蓝光会抑制褪黑素分泌\n5. 进行规律运动，但避免睡前剧烈运动\n6. 避免晚间大量进食\n7. 如有必要，短暂午睡不超过20-30分钟\n\n如果持续有睡眠问题，建议咨询医生或睡眠专家。",
+            "source": "Centers for Disease Control and Prevention (CDC)",
+            "source_url": "https://www.cdc.gov/sleep/",
+            "tier": 1
+        }
+    ]
+}

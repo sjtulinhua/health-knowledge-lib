@@ -1,0 +1,26 @@
+{
+    "category": "hrv",
+    "items": [
+        {
+            "title": "心率变异性(HRV)定义 - ESC/NASPE标准",
+            "content": "心率变异性(Heart Rate Variability, HRV)是指连续心跳之间时间间隔的变化。根据欧洲心脏病学会(ESC)和北美起搏电生理学会(NASPE)的标准定义，HRV反映了自主神经系统对心脏的调节功能。\n\n较高的HRV通常表示身体具有更好的适应能力和恢复能力，而较低的HRV可能与压力、疲劳、过度训练或某些健康问题相关。HRV是评估整体健康状况和训练恢复的重要指标。",
+            "source": "European Society of Cardiology / North American Society of Pacing and Electrophysiology",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/8737210/",
+            "tier": 1
+        },
+        {
+            "title": "HRV的常用测量指标",
+            "content": "HRV的主要测量指标包括：\n\n时域指标：\n- SDNN：所有正常RR间期的标准差，反映整体HRV\n- RMSSD：相邻RR间期差值的均方根，主要反映副交感神经活动\n- pNN50：相邻RR间期差值大于50ms的百分比\n\n频域指标：\n- HF (高频)：0.15-0.4Hz，主要反映副交感神经活动\n- LF (低频)：0.04-0.15Hz，反映交感和副交感神经的综合作用\n- LF/HF比值：反映交感-副交感神经平衡\n\n正常成年人的RMSSD通常在20-80ms之间，运动员可能更高。",
+            "source": "Task Force of ESC and NASPE",
+            "source_url": "https://pubmed.ncbi.nlm.nih.gov/8737210/",
+            "tier": 1
+        },
+        {
+            "title": "如何提高HRV",
+            "content": "根据运动科学研究，以下方法可以帮助提高HRV：\n\n1. 规律运动：有氧运动可以提高心肺功能，从而提高HRV\n2. 充足睡眠：保证7-9小时的高质量睡眠\n3. 压力管理：冥想、深呼吸练习可以激活副交感神经\n4. 健康饮食：均衡饮食，避免过量酒精和咖啡因\n5. 避免过度训练：给身体足够的恢复时间\n\n建议在固定时间（如早晨醒来后）测量HRV，以获得一致的数据进行趋势分析。",
+            "source": "American College of Sports Medicine (ACSM)",
+            "source_url": "https://www.acsm.org/",
+            "tier": 1
+        }
+    ]
+}
