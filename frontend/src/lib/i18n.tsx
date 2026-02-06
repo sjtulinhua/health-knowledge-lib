@@ -16,6 +16,7 @@ const translations: Translations = {
     "nav.browse": "Browse",
     "nav.chat": "Chat",
     "nav.title": "HealthLib",
+    "nav.collector": "Collector",
     
     // Home
     "home.badge": "v1.0 Public Beta",
@@ -75,6 +76,7 @@ const translations: Translations = {
     "nav.browse": "浏览知识库",
     "nav.chat": "智能问答",
     "nav.title": "健康知识库",
+    "nav.collector": "知识捕手",
 
     // Home
     "home.badge": "v1.0 公测版",

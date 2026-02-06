@@ -28,7 +28,8 @@ export default function NavBar() {
           <div className="hidden md:flex gap-1">
             {[
               { name: t("nav.browse"), href: "/browse" },
-              { name: t("nav.chat"), href: "/chat" }
+              { name: t("nav.chat"), href: "/chat" },
+              { name: t("nav.collector"), href: "/collector" }
             ].map((item) => (
               <Link
                 key={item.href}

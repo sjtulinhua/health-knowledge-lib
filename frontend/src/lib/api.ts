@@ -148,3 +148,48 @@ export async function getSuggestedQuestions(): Promise<Suggestion[]> {
   if (!res.ok) throw new Error('Failed to fetch suggestions');
   return res.json();
 }
+
+// Collector API
+export interface WebSearchResult {
+  title: string;
+  url: string;
+  snippet: string;
+  source: string;
+}
+
+export interface ContentPreview {
+  title: string;
+  category: string;
+  summary: string;
+  content: string;
+  tier: number;
+  source_name: string;
+  url: string;
+}
+
+export async function searchWeb(query: string): Promise<WebSearchResult[]> {
+  const params = new URLSearchParams({ q: query });
+  const res = await fetch(`${API_BASE}/api/collector/search?${params}`);
+  if (!res.ok) throw new Error('Search failed');
+  return res.json();
+}
+
+export async function previewContent(url: string): Promise<ContentPreview> {
+  const res = await fetch(`${API_BASE}/api/collector/preview`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url }),
+  });
+  if (!res.ok) throw new Error('Preview failed');
+  return res.json();
+}
+
+export async function importContent(data: ContentPreview): Promise<{ id: string; status: string }> {
+  const res = await fetch(`${API_BASE}/api/collector/import`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error('Import failed');
+  return res.json();
+}
