@@ -29,8 +29,9 @@ pytest>=7.4.0
 httpx>=0.26.0
 
 # Knowledge Collector
-duckduckgo-search>=5.0.0
+ddgs>=1.0.0
 trafilatura>=1.6.0
 lxml_html_clean>=0.1.0
+googlesearch-python>=1.2.0
 
 

@@ -17,25 +17,27 @@ class CollectorService:
             genai.configure(api_key=settings.gemini_api_key)
 
     def search_web(self, query: str, max_results: int = 10) -> List[Dict[str, str]]:
-        """Search the web for health guidelines."""
+        """Search the web for health guidelines using DuckDuckGo with Google fallback."""
         import os
-        # Simplify query - DuckDuckGo doesn't handle complex OR site filters well
-        # We'll stick to simple keywords and maybe one broad filter
+        from googlesearch import search as google_search
+
+        # 1. Prepare search query
         search_query = f"{query} health guidelines"
         
-        # Get proxy from ENV
+        # 2. Get proxy from ENV (important for local dev, usually None on Render)
         proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
         
         results = []
+        
+        # --- Attempt 1: DuckDuckGo ---
         try:
-            # Use proxy explicitly if found
-            with DDGS(proxy=proxy) as ddgs:
-                # Use text search with a timeout/headers if possible
+            print(f"Searching DDG for: {search_query} (Proxy: {proxy})")
+            # Explicitly pass proxy=None if not set, to avoid "trust_env" ambiguity sometimes
+            with DDGS(proxy=proxy, timeout=20) as ddgs:
                 ddg_results = list(ddgs.text(search_query, max_results=max_results))
                 
                 if not ddg_results:
-                     # Try even simpler query if empty
-                     print(f"No results for '{search_query}', trying simpler...")
+                     print(f"DDG empty results, retrying with simpler query...")
                      ddg_results = list(ddgs.text(query, max_results=max_results))
 
                 for r in ddg_results:
@@ -46,8 +48,28 @@ class CollectorService:
                         "source": self._extract_domain(r.get("href", ""))
                     })
         except Exception as e:
-            print(f"Search error: {type(e).__name__}: {e}")
-            
+            print(f"DDG Search error: {type(e).__name__}: {e}")
+
+        # --- Attempt 2: Google Fallback (if DDG failed or returned nothing) ---
+        if not results:
+            try:
+                print(f"Falling back to Google Search for: {query}")
+                # googlesearch-python uses requests/BeautifulSoup under the hood
+                # It automatically handles some user-agent stuff
+                g_results = google_search(f"{query} medical guidelines", num_results=max_results, advanced=True)
+                
+                for r in g_results:
+                    # r is an object with title, url, description properties
+                    results.append({
+                        "title": r.title,
+                        "url": r.url,
+                        "snippet": r.description,
+                        "source": self._extract_domain(r.url)
+                    })
+            except Exception as e:
+                print(f"Google Fallback error: {type(e).__name__}: {e}")
+
+        print(f"Total results found: {len(results)}")
         return results
 
     def _extract_domain(self, url: str) -> str:
