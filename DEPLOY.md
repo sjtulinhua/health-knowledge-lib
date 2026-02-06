@@ -9,17 +9,31 @@
 
 ## 第一步：部署后端 (Render)
 
-我们需要先部署后端，因为前端需要后端的 API 地址。
+我们需要先部署后端，因为前端需要后端的 API 地址。为了确保使用**免费额度**，请按照以下步骤手动创建服务：
 
 1.  **注册/登录**: 访问 [dashboard.render.com](https://dashboard.render.com/) 并使用 GitHub 账号登录。
 2.  **创建服务**:
-    - 点击 **"New +"** 按钮 -> 选择 **"Blueprint"**。
-    - 连接你的 GitHub 仓库 `health-knowledge-lib`。
-    - Render 会自动读取仓库里的 `render.yaml` 配置文件。
-3.  **配置密钥**:
-    - 在配置页面，你会看到 `GEMINI_API_KEY` 的输入框。
-    - 填入你的 Google Gemini API Key。
-4.  **点击 Apply**:
+    - 点击右上角 **"New +"** 按钮。
+    - 选择 **"Web Service"** (不要选 Blueprint)。
+    - 在列表中选择你的 GitHub 仓库 `health-knowledge-lib`，点击 **Connect**。
+3.  **填写配置** (重要！):
+    - **Name**: 随便填，例如 `health-knowledge-backend`。
+    - **Region**: 建议选 Singapore (新加坡) 或 US West，取决于你离哪儿近。
+    - **Branch**: `main`.
+    - **Root Directory**: `backend` (这里一定要填 `backend`)。
+    - **Runtime**: `Python 3`.
+    - **Build Command**: `pip install -r requirements.txt` (注意不需要 `cd backend`)。
+    - **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4.  **选择套餐**:
+    - 向下滚动，确保选择 **"Free"** (免费版) 套餐。
+5.  **配置环境变量**:
+    - 找到 "Environment Variables" 区域。
+    - 点击 "Add Environment Variable"。
+    - Key: `GEMINI_API_KEY`
+    - Value: 填入你的 Google Gemini API Key。
+    - Key: `PYTHON_VERSION`
+    - Value: `3.11.0`
+6.  **点击 Create Web Service**:
     - 等待几分钟，部署完成后，你会在左上角看到一个 URL（例如 `https://health-knowledge-backend.onrender.com`）。
     - **复制这个网址**，下一步要用。
 
