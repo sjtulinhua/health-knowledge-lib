@@ -1,7 +1,7 @@
 """Service for collecting knowledge from the web."""
 from typing import List, Dict, Any, Optional
 import asyncio
-from ddgs import DDGS
+from duckduckgo_search import DDGS
 import trafilatura
 from concurrent.futures import ThreadPoolExecutor
 
